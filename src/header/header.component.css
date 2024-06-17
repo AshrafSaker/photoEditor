@@ -1,0 +1,12 @@
+* {
+  text-align: center;
+}
+
+#title {
+  font-family: sans-serif;
+  font-weight: bolder;
+  background-color: beige;
+  font-size: 250%;
+}
+
+

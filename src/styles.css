@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  background-color: lightgray;
+  color: navy;
+}
+
+table *{
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

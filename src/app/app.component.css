@@ -1,0 +1,10 @@
+app-root {
+  border: 2px solid blue ;
+}
+
+.red {
+  background-color: red;
+  color: antiquewhite;
+  font-weight: bolder;
+  width: 25%;
+}
