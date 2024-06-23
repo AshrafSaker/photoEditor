@@ -18,20 +18,32 @@
 }
 <p>Fill name & password to Show it in belw</p>
 <label >Name:
-  <input type="text" [(ngModel)]="name">
+  <input type="text" [(ngModel)]="name" placeholder="Write your name">
 </label>
 
 <br>
 <label >Password:
-  <input type="password" [(ngModel)]="password">
+  <input type="password" [(ngModel)]="password" placeholder="Write Password">
 </label>
 <p class="big" [class]="upperClass">{{name}}</p>
 <p class="big">{{password}}</p>
 
 <form (ngSubmit)="showName()" #myForm="ngForm">
   <label >User Name:
-    <input type="text" [(ngModel)]="username" name="username" required />
+    <input type="text" [(ngModel)]="username" name="username" required placeholder="write User name"/>
   </label>
   <input type="submit" value="Submit" [disabled]="!myForm.form.valid"/>
   Required to Submit
 </form>
+<form (ngSubmit)="showFormControl()">
+  <div>
+
+    <!--Form control-->
+    <h3>Form control</h3>
+    <input type="text"  name="formName"  [formControl]="formName" placeholder="Form Control"/>
+    <input type="text"  name="color"  [formControl]="color" placeholder="Form Control color"/>
+    <input type="submit" value="Submit">
+  </div>
+</form>
+<p>{{formName.value}}</p>
+<p>{{color.value}}</p>

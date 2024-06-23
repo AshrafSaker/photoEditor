@@ -1,13 +1,17 @@
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule } from '@angular/forms';
 import {HeaderComponent} from '../header/header.component';
 import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import  { ReactiveFormsModule } from '@angular/forms';
+
+
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent,RouterOutlet,FormsModule],
+  imports: [HeaderComponent,RouterOutlet,FormsModule,ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -30,11 +34,19 @@ export class AppComponent {
   myClasses = ['highlight', 'uppercase'];
 
   products = ['apple', 'orange', 'banana'];
-  name = ' null';
-  password = '****';
+  name = '';
+  password = '';
   username = '';
   showName(){
-    alert(this.username);
+    console.log(this.username);
+  }
+
+  //formcontrol
+  formName = new FormControl('');
+  color = new FormControl('Red');
+  showFormControl(){
+    console.log(this.formName.value)
+    console.log(this.color.value)
   }
 }
 
