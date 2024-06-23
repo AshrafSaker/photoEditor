@@ -17,3 +17,15 @@ table *{
 .uppercase {
   text-transform: uppercase;
 }
+
+
+input.ng-valid {
+  background-color: #79ba6a;
+  font-weight: bolder;
+  text-align: center;
+}
+
+input.ng-invalid {
+  background-color: #f58c84;
+  font-weight: bolder;
+}

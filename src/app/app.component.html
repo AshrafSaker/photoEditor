@@ -9,4 +9,29 @@
 
 <p [class.red]="isRed" (mouseover)="change()" [class]="upperClass">over to change color</p>
 
+@for (item of products; track $index ) {
+  <div>{{ item }}</div>
+  }
 
+@if (isRed){
+  <div>Welcome at, if decores run while isRed True , if false is disapper </div>
+}
+<p>Fill name & password to Show it in belw</p>
+<label >Name:
+  <input type="text" [(ngModel)]="name">
+</label>
+
+<br>
+<label >Password:
+  <input type="password" [(ngModel)]="password">
+</label>
+<p class="big" [class]="upperClass">{{name}}</p>
+<p class="big">{{password}}</p>
+
+<form (ngSubmit)="showName()" #myForm="ngForm">
+  <label >User Name:
+    <input type="text" [(ngModel)]="username" name="username" required />
+  </label>
+  <input type="submit" value="Submit" [disabled]="!myForm.form.valid"/>
+  Required to Submit
+</form>
