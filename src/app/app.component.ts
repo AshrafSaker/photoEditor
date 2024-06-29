@@ -3,6 +3,8 @@ import {HeaderComponent} from '../header/header.component';
 import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import  { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 
 
@@ -11,7 +13,7 @@ import  { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent,RouterOutlet,FormsModule,ReactiveFormsModule],
+  imports: [HeaderComponent,RouterOutlet,FormsModule,ReactiveFormsModule,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -19,14 +21,14 @@ export class AppComponent {
   login() {
 
     alert("Welcome");
-  }
+  };
 
   isRed = false;
   upperClass = ['uppercase'];
   change() {
     this.isRed = !this.isRed;
     console.log("changed");
-  }
+  };
   imageURL = 'https://www.sololearn.com/images/tree.jpg';
   imgAlt = 'Tree';
 
@@ -39,7 +41,7 @@ export class AppComponent {
   username = '';
   showName(){
     console.log(this.username);
-  }
+  };
 
   //formcontrol
   formName = new FormControl('');
@@ -47,7 +49,16 @@ export class AppComponent {
   showFormControl(){
     console.log(this.formName.value)
     console.log(this.color.value)
-  }
+  };
+
+  //FormGroup
+  formLogin = new FormGroup({
+    user: new FormControl('',Validators.required),
+    pass: new FormControl(''),
+  });
+  groupForm(){
+    console.log(this.formLogin.value.user + '|'+this.formLogin.value.pass)
+  };
 }
 
 

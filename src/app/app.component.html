@@ -47,3 +47,16 @@
 </form>
 <p>{{formName.value}}</p>
 <p>{{color.value}}</p>
+
+<!--Form Group -->
+<h2>Form Group</h2>
+<form [formGroup]="formLogin" (ngSubmit)="groupForm()">
+  <p>User Name:<input type="text" formControlName="user">// Required to Valid Submit</p>
+  <p>PassWord:<input type="text" formControlName="pass"></p>
+  <p><input type="submit" value="Submit" [disabled]="!formLogin.valid"></p>
+</form>
+
+{{formLogin.value.user}} | {{formLogin.value.pass}}
+
+
+
