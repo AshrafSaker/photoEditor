@@ -9,4 +9,8 @@
   font-size: 250%;
 }
 
+nav a {
+  margin-right: 5px;
+  text-decoration: none;
+}
 

@@ -1,10 +1,21 @@
+
 import { FormControl, FormsModule } from '@angular/forms';
 import {HeaderComponent} from '../header/header.component';
 import { Component} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Routes } from '@angular/router';
 import  { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ContactsComponent } from './contacts/contacts.component';
+
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'contacts', component: ContactsComponent },
+];
+
+bootstrapApplication(AppComponent);
 
 
 
@@ -13,7 +24,7 @@ import { Validators } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent,RouterOutlet,FormsModule,ReactiveFormsModule,],
+  imports: [HeaderComponent,RouterOutlet,FormsModule,ReactiveFormsModule,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
