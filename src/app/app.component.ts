@@ -7,15 +7,7 @@ import  { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ContactsComponent } from './contacts/contacts.component';
 
-const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'contacts', component: ContactsComponent },
-];
-
-bootstrapApplication(AppComponent);
 
 
 
