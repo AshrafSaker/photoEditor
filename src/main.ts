@@ -4,10 +4,12 @@ import { AppComponent } from './app/app.component';
 import {provideRouter,Routes} from '@angular/router'
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: 'test', component: TestComponent },
 ];
 
 
