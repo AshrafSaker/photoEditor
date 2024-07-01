@@ -2,18 +2,4 @@ app-root {
   border: 2px solid blue ;
 }
 
-.red {
-  background-color: red;
-  color: antiquewhite;
-  font-weight: bolder;
-  width: auto;
-  font-size: 300%;
-  text-align: center;
-}
 
-.big {
-  font-size: 300%;
-  color: aliceblue;
-  background-color: brown;
-  text-align: center;
-}

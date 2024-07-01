@@ -1,1 +1,63 @@
 <p>test works!</p>
+<img [src]="imageURL" [alt]="imgAlt" />
+
+
+<p [class.highlight]="isHighlighted">some text</p>
+<p [class]="myClasses">some text</p>
+
+<button (click)="login()">Click Me </button>
+
+<p [class.red]="isRed" (mouseover)="change()" [class]="upperClass">over to change color</p>
+
+@for (item of products; track $index ) {
+  <div>{{ item }}</div>
+  }
+
+@if (isRed){
+  <div>Welcome at, if decores run while isRed True , if false is disapper </div>
+}
+<p>Fill name & password to Show it in belw</p>
+<label >Name:
+  <input type="text" [(ngModel)]="name" placeholder="Write your name">
+</label>
+
+<br>
+<label >Password:
+  <input type="password" [(ngModel)]="password" placeholder="Write Password">
+</label>
+<p class="big" [class]="upperClass">{{name}}</p>
+<p class="big">{{password}}</p>
+
+<form (ngSubmit)="showName()" #myForm="ngForm">
+  <label >User Name:
+    <input type="text" [(ngModel)]="username" name="username" required placeholder="write User name"/>
+  </label>
+  <input type="submit" value="Submit" [disabled]="!myForm.form.valid"/>
+  Required to Submit
+</form>
+<form (ngSubmit)="showFormControl()">
+  <div>
+
+    <!--Form control-->
+    <h3>Form control</h3>
+    <input type="text"  name="formName"  [formControl]="formName" placeholder="Form Control"/>
+    <input type="text"  name="color"  [formControl]="color" placeholder="Form Control color"/>
+    <input type="submit" value="Submit">
+  </div>
+</form>
+<p>{{formName.value}}</p>
+<p>{{color.value}}</p>
+
+<!--Form Group -->
+<h2>Form Group</h2>
+<form [formGroup]="formLogin" (ngSubmit)="groupForm()">
+  <p>User Name:<input type="text" formControlName="user">// Required to Valid Submit</p>
+  <p>PassWord:<input type="text" formControlName="pass"></p>
+  <p><input type="submit" value="Submit" [disabled]="!formLogin.valid"></p>
+</form>
+
+{{formLogin.value.user}} | {{formLogin.value.pass}}
+
+
+
+
