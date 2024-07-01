@@ -6,13 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { TestComponent } from './test/test.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { title } from 'process';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'contacts', component: ContactsComponent },
-  { path: 'test', component: TestComponent },
-  { path: '**', component: NotFoundComponent },
+  { path: '', title:'Home Page',component: HomeComponent },
+  { path: 'home',title:'Home Page', component: HomeComponent },
+  { path: 'contacts',title:'Contact Us', component: ContactsComponent },
+  { path: 'test',title:'Test', component: TestComponent },
+  { path: '**',title:'Erorr', component: NotFoundComponent },
 ];
 
 
